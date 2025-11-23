@@ -3,77 +3,210 @@
 <head>
 <meta charset="UTF-8">
 <title>Happy Birthday Esha!</title>
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
-<style>
-body { margin:0; padding:0; overflow-x:hidden; text-align:center; background:black; font-family:'Poppins',sans-serif; }
-.background { position:fixed; top:0; left:0; width:100%; height:100%; background:linear-gradient(45deg,#ff0080,#ff8c00,#8000ff,#ff0080); background-size:500% 500%; animation:gradientBG 20s ease infinite; z-index:-3; }
-@keyframes gradientBG {0%{background-position:0% 50%;}50%{background-position:100% 50%;}100%{background-position:0% 50%;}}
-.stars { position:fixed; width:100%; height:100%; background:url('https://i.imgur.com/YWY3bFH.png'); opacity:0.25; animation:sparkle 150s linear infinite; z-index:-2; }
-@keyframes sparkle { from {transform:translateY(0);} to {transform:translateY(-2000px);} }
-.container { padding-top:80px; color:white; }
-h1 { font-family:'Great Vibes',cursive; font-size:65px; margin-bottom:10px; animation:glow 2s ease-in-out infinite; }
-@keyframes glow {0%{text-shadow:0 0 10px #ff00ff;}50%{text-shadow:0 0 25px #ff8c00;}100%{text-shadow:0 0 10px #ff00ff;}}
-#slideshow { width:85%; max-width:380px; height:380px; margin:auto; border-radius:20px; overflow:hidden; box-shadow:0 0 25px rgba(255,255,255,0.4); }
-#slideshow img { width:100%; height:100%; object-fit:cover; }
-p { font-size:20px; width:85%; margin:auto; margin-top:20px; line-height:1.5; }
 
-#tapMsg {
-    font-size:22px;
-    margin-top:25px;
-    color:#ffd6ff;
-    animation:blink 1.4s infinite;
-}
-@keyframes blink {
-    0% { opacity:1; }
-    50% { opacity:0.3; }
-    100% { opacity:1; }
-}
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        text-align: center;
+        background: black;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(120deg, #ff5f9e, #ffa8d6, #ffd1f9, #c585ff, #8f5fff);
+        background-size: 500% 500%;
+        animation: gradientBG 20s ease infinite;
+        z-index: -3;
+    }
+
+    @keyframes gradientBG {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    .stars {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: url('https://i.imgur.com/5bYQFZ8.png');
+        opacity: 0.25;
+        animation: sparkle 150s linear infinite;
+        z-index: -2;
+    }
+
+    @keyframes sparkle {
+        from { transform: translateY(0); }
+        to { transform: translateY(-2000px); }
+    }
+
+    h1 {
+        font-family: 'Great Vibes', cursive;
+        font-size: 85px;
+        margin-top: 40px;
+        color: #fff;
+        text-shadow: 0 0 20px #ff4eb6, 0 0 40px #ff4eb6, 0 0 80px #ff4eb6;
+        animation: glow 3s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+        from { text-shadow: 0 0 20px #ff4eb6; }
+        to { text-shadow: 0 0 40px #ff4eb6, 0 0 80px #ff4eb6; }
+    }
+
+    .photo-frame {
+        margin-top: 20px;
+        padding: 15px;
+        background: rgba(255,255,255,0.15);
+        backdrop-filter: blur(10px);
+        border-radius: 25px;
+        box-shadow: 0 10px 40px rgba(255,100,200,0.6);
+        display: inline-block;
+        animation: popIn 2s ease;
+    }
+
+    img {
+        width: 350px;
+        border-radius: 20px;
+        box-shadow: 0 0 25px rgba(255,255,255,0.7);
+    }
+
+    @keyframes popIn {
+        0% { transform: scale(0.5); opacity: 0; }
+        100% { transform: scale(1); opacity: 1; }
+    }
+
+    #message {
+        margin: 30px auto 0;
+        width: 85%;
+        font-size: 26px;
+        color: white;
+        min-height: 140px;
+        line-height: 1.7;
+        text-shadow: 0 0 6px #ffb3e7;
+    }
+
+    .heart {
+        position: fixed;
+        bottom: -20px;
+        color: #ff2a70;
+        font-size: 30px;
+        animation: floatHeart 7s linear infinite;
+        z-index: 5;
+    }
+
+    @keyframes floatHeart {
+        0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+        100% { transform: translateY(-900px) rotate(360deg); opacity: 0; }
+    }
+
+    .petal {
+        position: fixed;
+        top: -50px;
+        width: 25px;
+        height: 25px;
+        background: url('https://i.imgur.com/LaYph.png');
+        background-size: cover;
+        animation: fall 9s linear infinite;
+        opacity: 0.9;
+        z-index: 3;
+    }
+
+    @keyframes fall {
+        0% { transform: translateY(0) rotate(0deg); }
+        100% { transform: translateY(120vh) rotate(720deg); }
+    }
+
+    .firework {
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        background: white;
+        border-radius: 50%;
+        animation: explode 1s ease-out forwards;
+        z-index: 10;
+    }
+
+    @keyframes explode {
+        0% { transform: scale(1); opacity: 1; }
+        100% { transform: scale(40); opacity: 0; }
+    }
 </style>
 </head>
+
 <body>
+
 <div class="background"></div>
 <div class="stars"></div>
 
-<div class="container">
-<h1>Happy Birthday Esha ❤️</h1>
+<h1>🎉 Happy Birthday Esha! 🎂</h1>
 
-<div id="slideshow">
-    <img id="slideImg" src="photo.jpg">
+<div class="photo-frame">
+    <img src="photo.jpg" alt="Esha & You">
 </div>
 
-<div id="tapMsg">Tap anywhere to start music 🎵</div>
+<div id="message"></div>
 
-<p id="message"></p>
-
-<audio id="bgmusic" loop>
-    <source src="song.mp3" type="audio/mpeg">
+<audio id="bgm" autoplay loop>
+    <source src="Happy Birthday Instrumental.mp3" type="audio/mpeg">
 </audio>
-</div>
 
 <script>
-let photos = ["photo.jpg", "h3.jpg", "h4.jpg", "h5.jpg", "h6.jpg"];
+document.addEventListener("click", function() {
+    const audio = document.getElementById("bgm");
+    if (audio.paused) audio.play();
+});
+
+let msg = 
+"Happy Birthday, my love ❤\n\nOn your special day, I just want to remind you how grateful I am to have you in my life. You bring joy, warmth, and meaning into every moment we share.\n\nI promise you this—from today, tomorrow, and every day after—we’ll stay together until our hair turns grey. I’ll be by your side through every smile, every dream, every challenge, and every beautiful chapter of our lives.\n\nYou deserve all the happiness in the world, and I’ll do everything I can to give you exactly that.\n\nI love you, endlessly. Happy Birthday, my forever. 💕";
+
 let index = 0;
-
-setInterval(() => {
-    index = (index + 1) % photos.length;
-    document.getElementById("slideImg").src = photos[index];
-}, 3000);
-
-let msg = "On your special day, I just want to remind you how much you mean to me. You bring light, love, and happiness into my world every single day. I promise to stay by your side till our hair turns grey ❤️✨";
-let i=0;
-function typeWriter(){
-    if(i < msg.length){
-        document.getElementById("message").innerHTML += msg.charAt(i);
-        i++;
-        setTimeout(typeWriter, 40);
+function type() {
+    if (index < msg.length) {
+        document.getElementById("message").innerHTML += msg.charAt(index);
+        index++;
+        setTimeout(type, 40);
     }
 }
-typeWriter();
+window.onload = type;
 
-document.body.addEventListener("click", function() {
-    document.getElementById("bgmusic").play();
-    document.getElementById("tapMsg").style.display = "none";
-}, { once:true });
+setInterval(() => {
+    let heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = "❤";
+    heart.style.left = Math.random() * window.innerWidth + "px";
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 7000);
+}, 350);
+
+setInterval(() => {
+    let petal = document.createElement("div");
+    petal.className = "petal";
+    petal.style.left = Math.random() * window.innerWidth + "px";
+    petal.style.animationDuration = (7 + Math.random() * 5) + 's';
+    document.body.appendChild(petal);
+    setTimeout(() => petal.remove(), 12000);
+}, 300);
+
+document.addEventListener("click", e => {
+    for (let i = 0; i < 25; i++) {
+        let f = document.createElement("div");
+        f.className = "firework";
+        f.style.left = e.clientX + "px";
+        f.style.top = e.clientY + "px";
+        document.body.appendChild(f);
+        setTimeout(() => f.remove(), 1000);
+    }
+});
 </script>
 
 </body>
